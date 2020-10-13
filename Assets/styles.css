@@ -1,0 +1,19 @@
+.intro {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: dimgray;
+}
+
+.directions {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.start-button {
+    margin: auto;
+    height: 100px;
+    width: 200px;
+    font-size: 30px;
+    background-color: green;
+    color: white;
+}
