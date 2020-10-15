@@ -1,19 +1,20 @@
-.intro {
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: dimgray;
+.welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 1px solid grey;
+    flex-direction: column;
+    height: 350px ;
+    margin-bottom: 10px;
 }
 
-.directions {
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
 
-.start-button {
-    margin: auto;
+.start-button { 
+    margin: 0 auto;
     height: 100px;
     width: 200px;
     font-size: 30px;
-    background-color: green;
+    background-color: seagreen;
     color: white;
 }
