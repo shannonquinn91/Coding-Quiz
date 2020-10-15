@@ -96,7 +96,7 @@ var quiz = [
     },
     {
         question: "20. If you wanted to select all <p> tags in an HTML file, which would you use?",
-        options: ["a. document.querySelector("p")", "b. document.getElementByID("p")", "c. document.getElementByClass("p")", "d. document.querySelectorAll("p")"], 
+        options: ["a. document.querySelector(p)", "b. document.getElementByID(p)", "c. document.getElementByClass(p)", "d. document.querySelectorAll(p)"], 
         correctAnswer: 3
     }
 ]
@@ -104,16 +104,24 @@ var quiz = [
 var quizIndex = 0;
 var startBtn = document.querySelector(".start-button"); 
 
+function clearWelcome () {
+    var clearWelcome = document.querySelector(".welcome");
+    clearWelcome.innerHTML = ("");
+}
+
 function renderQuestion (currentIndex){
     var question = quiz[currentIndex].question;
-    var options = quiz[currentIndex].options;
-    var writeQuestion = document.querySelector(".intro");
-    var writeOptions = document.querySelector(".directions");
+    var options = quiz[currentIndex].options; 
+    var writeQuestion = document.querySelector(".quiz-question");
+    var writeOptions = document.querySelector(".quiz-options");
     writeQuestion.textContent = (question);
     writeOptions.textContent = (options);
+
 }
 
 startBtn.addEventListener('click', function(){
+    clearWelcome();
     renderQuestion(quizIndex);
     startBtn.textContent = ("Next");
+    quizIndex++;
 })
