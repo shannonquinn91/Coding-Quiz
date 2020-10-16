@@ -104,6 +104,7 @@ var quiz = [
 var quizIndex = 0;
 var startBtn = document.querySelector(".start-button"); 
 
+
 function clearWelcome () {
     var clearWelcome = document.querySelector(".welcome");
     clearWelcome.innerHTML = ("");
@@ -151,11 +152,12 @@ startBtn.addEventListener('click', function(){
 })
 
 
+var result = document.querySelector(".quiz-answer");
+
 optionA.addEventListener('click', function(){
     quizIndex++
     renderQuestion(quizIndex)
     if (quiz[quizIndex].correctAnswer === 0) {
-        var result = document.querySelector(".quiz-answer");
         result.textContent = "Correct!"
     }
 })
@@ -163,7 +165,6 @@ optionB.addEventListener('click', function(){
     quizIndex++
     renderQuestion(quizIndex)
     if (quiz[quizIndex].correctAnswer === 1) {
-        var result = document.querySelector(".quiz-answer");
         result.textContent = "Correct!"
     }
 })
@@ -171,7 +172,6 @@ optionC.addEventListener('click', function(){
     quizIndex++
     renderQuestion(quizIndex)
     if (quiz[quizIndex].correctAnswer === 2) {
-        var result = document.querySelector(".quiz-answer");
         result.textContent = "Correct!"
     }
 })
@@ -179,7 +179,6 @@ optionD.addEventListener('click', function(){
     quizIndex++
     renderQuestion(quizIndex)
     if (quiz[quizIndex].correctAnswer === 3) {
-        var result = document.querySelector(".quiz-answer");
         result.textContent = "Correct!"
     }
     
