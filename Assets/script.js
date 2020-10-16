@@ -127,20 +127,19 @@ function setTime(){
     
     }, 1000);
 }
+var optionA = document.querySelector(".quiz-option-a");
+var optionB = document.querySelector(".quiz-option-b");
+var optionC = document.querySelector(".quiz-option-c");
+var optionD = document.querySelector(".quiz-option-d");
 
 function renderQuestion (currentIndex){
     var question = quiz[currentIndex].question;
-    var options = quiz[currentIndex].options; 
     var writeQuestion = document.querySelector(".quiz-question");
     writeQuestion.textContent = question;
     
-    var optionA = document.querySelector(".quiz-option-a");
     optionA.textContent = quiz[currentIndex].options[0];
-    var optionB = document.querySelector(".quiz-option-b");
     optionB.textContent = quiz[currentIndex].options[1];
-    var optionC = document.querySelector(".quiz-option-c");
     optionC.textContent = quiz[currentIndex].options[2];
-    var optionD = document.querySelector(".quiz-option-d");
     optionD.textContent = quiz[currentIndex].options[3];    
 }
 
@@ -150,5 +149,14 @@ startBtn.addEventListener('click', function(){
     renderQuestion(quizIndex);
     hideButton();
 })
+
+optionA.addEventListener('click', function(){
+    renderQuestion(quizIndex)
+    quizIndex++
+})
+
+
+
+
 
 
