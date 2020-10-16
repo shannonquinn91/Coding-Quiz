@@ -150,9 +150,10 @@ startBtn.addEventListener('click', function(){
     hideButton();
 })
 
+
 optionA.addEventListener('click', function(){
-    renderQuestion(quizIndex)
     quizIndex++
+    renderQuestion(quizIndex)
 })
 
 
