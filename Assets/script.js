@@ -155,6 +155,18 @@ optionA.addEventListener('click', function(){
     quizIndex++
     renderQuestion(quizIndex)
 })
+optionB.addEventListener('click', function(){
+    quizIndex++
+    renderQuestion(quizIndex)
+})
+optionC.addEventListener('click', function(){
+    quizIndex++
+    renderQuestion(quizIndex)
+})
+optionD.addEventListener('click', function(){
+    quizIndex++
+    renderQuestion(quizIndex)
+})
 
 
 
