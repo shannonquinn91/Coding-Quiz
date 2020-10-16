@@ -8,9 +8,18 @@
     flex-direction: column;
     height: 350px ;
     margin-bottom: 10px;
+    padding: 10px;
 }
 
+.choices {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
 
+}
 
 .start-button { 
     margin: 0 auto;
@@ -19,4 +28,10 @@
     font-size: 30px;
     background-color: seagreen;
     color: white;
+}
+
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }

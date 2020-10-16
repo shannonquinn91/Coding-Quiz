@@ -109,19 +109,24 @@ function clearWelcome () {
     clearWelcome.innerHTML = ("");
 }
 
+function hideButton () {
+    startBtn.style.display = "none";
+}
+
 function renderQuestion (currentIndex){
     var question = quiz[currentIndex].question;
     var options = quiz[currentIndex].options; 
     var writeQuestion = document.querySelector(".quiz-question");
-    var writeOptions = document.querySelector(".quiz-options");
-    writeQuestion.textContent = (question);
-    writeOptions.textContent = (options);
-
+    writeQuestion.textContent = question;
+    for (var i = 0; i < quiz[currentIndex].options.length; i++) {
+        document.querySelector(".quiz-options").innerHTML += options[i] + "<br>" + "<br>";
+    }
 }
+
+
 
 startBtn.addEventListener('click', function(){
     clearWelcome();
     renderQuestion(quizIndex);
-    startBtn.textContent = ("Next");
-    quizIndex++;
+    hideButton();
 })
