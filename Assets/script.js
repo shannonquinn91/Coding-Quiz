@@ -154,18 +154,35 @@ startBtn.addEventListener('click', function(){
 optionA.addEventListener('click', function(){
     quizIndex++
     renderQuestion(quizIndex)
+    if (quiz[quizIndex].correctAnswer === 0) {
+        var result = document.querySelector(".quiz-answer");
+        result.textContent = "Correct!"
+    }
 })
 optionB.addEventListener('click', function(){
     quizIndex++
     renderQuestion(quizIndex)
+    if (quiz[quizIndex].correctAnswer === 1) {
+        var result = document.querySelector(".quiz-answer");
+        result.textContent = "Correct!"
+    }
 })
 optionC.addEventListener('click', function(){
     quizIndex++
     renderQuestion(quizIndex)
+    if (quiz[quizIndex].correctAnswer === 2) {
+        var result = document.querySelector(".quiz-answer");
+        result.textContent = "Correct!"
+    }
 })
 optionD.addEventListener('click', function(){
     quizIndex++
     renderQuestion(quizIndex)
+    if (quiz[quizIndex].correctAnswer === 3) {
+        var result = document.querySelector(".quiz-answer");
+        result.textContent = "Correct!"
+    }
+    
 })
 
 
