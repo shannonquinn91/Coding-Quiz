@@ -118,15 +118,24 @@ function renderQuestion (currentIndex){
     var options = quiz[currentIndex].options; 
     var writeQuestion = document.querySelector(".quiz-question");
     writeQuestion.textContent = question;
-    for (var i = 0; i < quiz[currentIndex].options.length; i++) {
-        document.querySelector(".quiz-options").innerHTML += options[i] + "<br>" + "<br>";
-    }
+    
+    var optionA = document.querySelector(".quiz-option-a");
+    optionA.textContent = quiz[currentIndex].options[0];
+    var optionB = document.querySelector(".quiz-option-b");
+    optionB.textContent = quiz[currentIndex].options[1];
+    var optionC = document.querySelector(".quiz-option-c");
+    optionC.textContent = quiz[currentIndex].options[2];
+    var optionD = document.querySelector(".quiz-option-d");
+    optionD.textContent = quiz[currentIndex].options[3];
+    
+    
+    
 }
-
-
 
 startBtn.addEventListener('click', function(){
     clearWelcome();
     renderQuestion(quizIndex);
     hideButton();
 })
+
+
