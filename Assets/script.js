@@ -113,6 +113,21 @@ function hideButton () {
     startBtn.style.display = "none";
 }
 
+var timer = document.querySelector(".timeLeft")
+var secondsLeft = 121;
+
+function setTime(){
+    var timerInterval = setInterval(function(){
+        secondsLeft--;
+        timer.textContent = secondsLeft;
+        
+        //if (secondsLeft === 0) {
+          //  clearInterval(timerInterval);
+        //}
+    
+    }, 1000);
+}
+
 function renderQuestion (currentIndex){
     var question = quiz[currentIndex].question;
     var options = quiz[currentIndex].options; 
@@ -126,13 +141,11 @@ function renderQuestion (currentIndex){
     var optionC = document.querySelector(".quiz-option-c");
     optionC.textContent = quiz[currentIndex].options[2];
     var optionD = document.querySelector(".quiz-option-d");
-    optionD.textContent = quiz[currentIndex].options[3];
-    
-    
-    
+    optionD.textContent = quiz[currentIndex].options[3];    
 }
 
 startBtn.addEventListener('click', function(){
+    setTime();
     clearWelcome();
     renderQuestion(quizIndex);
     hideButton();
