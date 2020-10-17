@@ -114,20 +114,35 @@ function hideButton () {
     startBtn.style.display = "none";
 }
 
+function clearQuiz () {
+    var quizContent = document.querySelector(".quiz-content")
+    quizContent.innerHTML = ("");
+}
+
+var score = 0;
+
+function setScore() {
+    var scoreEl = document.querySelector(".score");
+    scoreEl.textContent = score;
+}
+
 var timer = document.querySelector(".timeLeft")
-var secondsLeft = 121;
+var secondsLeft = 61;
 
 function setTime(){
     var timerInterval = setInterval(function(){
         secondsLeft--;
         timer.textContent = secondsLeft;
         
-        //if (secondsLeft === 0) {
-          //  clearInterval(timerInterval);
-        //}
-    
+        if (secondsLeft <= 0) {
+            clearInterval(timerInterval);
+            timer.textContent = "Game Over!"
+            clearQuiz();
+        }
+        
     }, 1000);
 }
+
 var optionA = document.querySelector(".quiz-option-a");
 var optionB = document.querySelector(".quiz-option-b");
 var optionC = document.querySelector(".quiz-option-c");
@@ -149,6 +164,7 @@ startBtn.addEventListener('click', function(){
     clearWelcome();
     renderQuestion(quizIndex);
     hideButton();
+    setScore();
 })
 
 
@@ -156,36 +172,44 @@ var result = document.querySelector(".quiz-answer");
 
 optionA.addEventListener('click', function(){
     if (quiz[quizIndex].correctAnswer === 0) {
+        score++
         result.textContent = "Correct!"
     } else {
         result.Content = "Wrong Answer"
+        secondsLeft = secondsLeft - 10;
     }
     quizIndex++
     renderQuestion(quizIndex)
 })
 optionB.addEventListener('click', function(){
     if (quiz[quizIndex].correctAnswer === 1) {
+        score++
         result.textContent = "Correct!"
     } else {
         result.textContent = "Wrong Answer"
+        secondsLeft = secondsLeft - 10;
     }
     quizIndex++
     renderQuestion(quizIndex)
 })
 optionC.addEventListener('click', function(){
     if (quiz[quizIndex].correctAnswer === 2) {
+        score++
         result.textContent = "Correct!"
     } else {
         result.textContent = "Wrong Answer"
+        secondsLeft = secondsLeft - 10;
     }
     quizIndex++
     renderQuestion(quizIndex)
 })
 optionD.addEventListener('click', function(){
     if (quiz[quizIndex].correctAnswer === 3) {
+        score++
         result.textContent = "Correct!"
     } else {
         result.textContent = "Wrong Answer"
+        secondsLeft = secondsLeft - 10;
     }
     quizIndex++
     renderQuestion(quizIndex)
