@@ -149,38 +149,47 @@ startBtn.addEventListener('click', function(){
     clearWelcome();
     renderQuestion(quizIndex);
     hideButton();
+    console.log(indexOf(optionA))
 })
 
 
 var result = document.querySelector(".quiz-answer");
 
 optionA.addEventListener('click', function(){
-    quizIndex++
-    renderQuestion(quizIndex)
     if (quiz[quizIndex].correctAnswer === 0) {
         result.textContent = "Correct!"
+    } else {
+        result.Content = "Wrong Answer"
     }
+    quizIndex++
+    renderQuestion(quizIndex)
 })
 optionB.addEventListener('click', function(){
-    quizIndex++
-    renderQuestion(quizIndex)
     if (quiz[quizIndex].correctAnswer === 1) {
         result.textContent = "Correct!"
+    } else {
+        result.textContent = "Wrong Answer"
     }
+    quizIndex++
+    renderQuestion(quizIndex)
 })
 optionC.addEventListener('click', function(){
-    quizIndex++
-    renderQuestion(quizIndex)
     if (quiz[quizIndex].correctAnswer === 2) {
         result.textContent = "Correct!"
+    } else {
+        result.textContent = "Wrong Answer"
     }
-})
-optionD.addEventListener('click', function(){
     quizIndex++
     renderQuestion(quizIndex)
+})
+optionD.addEventListener('click', function(){
     if (quiz[quizIndex].correctAnswer === 3) {
         result.textContent = "Correct!"
+    } else {
+        result.textContent = "Wrong Answer"
     }
+    quizIndex++
+    renderQuestion(quizIndex)
     
 })
 
