@@ -149,7 +149,6 @@ startBtn.addEventListener('click', function(){
     clearWelcome();
     renderQuestion(quizIndex);
     hideButton();
-    console.log(indexOf(optionA))
 })
 
 
