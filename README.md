@@ -19,5 +19,4 @@ This assignment was particularly challenging for me based on what we were learni
 ![alt](./Assets/mid-quiz.png)
 ![alt](./Assets/game-over.png)
 
-![Gif](./Assets/Untitled_ Oct 17, 2020 6_15 PM.gif)
 
