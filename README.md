@@ -15,9 +15,9 @@ Next I used click events to each potential answer. If the index of the answer wa
 
 This assignment was particularly challenging for me based on what we were learning in class this week. I am really struggling with the score element and the high scores part. I am continually working on it to try to add more functionality (and style). 
 
-![Open Page] (Assets/welcome-page.png)
-![Mid Quiz] (Assets/mid-quiz.png)
-![Game Over] (Assets/game-over.png)
+![alt](./Assets/welcome-page.png)
+![alt](./Assets/mid-quiz.png)
+![alt](./Assets/game-over.png)
 
-![Gif] (Assets/Untitled_ Oct 17, 2020 6_15 PM.gif)
+![Gif](./Assets/Untitled_ Oct 17, 2020 6_15 PM.gif)
 
