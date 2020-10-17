@@ -1,7 +1,7 @@
 # Coding-Quiz
 This project was to create a timed quiz using javascript logic. The user has one minute to answer up to 20 multiple choice questions. If the user answers the question incorrectly, 10 seconds is deducted from the timer. 
 
-link![https://shannonquinn91.github.io/Coding-Quiz/]
+https://shannonquinn91.github.io/Coding-Quiz/
 
 I started all the code from scratch and started by creating an index HTML, a style sheet, and a javascript file. 
 
@@ -15,5 +15,9 @@ Next I used click events to each potential answer. If the index of the answer wa
 
 This assignment was particularly challenging for me based on what we were learning in class this week. I am really struggling with the score element and the high scores part. I am continually working on it to try to add more functionality (and style). 
 
+![Open Page] (Assets/welcome-page.png)
+![Mid Quiz] (Assets/mid-quiz.png)
+![Game Over] (Assets/game-over.png)
 
+![Gif] (Assets/Untitled_ Oct 17, 2020 6_15 PM.gif)
 
