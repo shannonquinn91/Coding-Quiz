@@ -119,17 +119,13 @@ function clearQuiz () {
     quizContent.innerHTML = ("");
 }
 
-var score = 0;
-
-function setScore() {
-    var scoreEl = document.querySelector(".score");
-    scoreEl.textContent = score;
-}
 
 var timer = document.querySelector(".timeLeft")
 var secondsLeft = 61;
 
 function setTime(){
+    var highScoreEl = document.querySelector(".score-content")
+    highScoreEl.style.display = "none";
     var timerInterval = setInterval(function(){
         secondsLeft--;
         timer.textContent = secondsLeft;
@@ -138,9 +134,16 @@ function setTime(){
             clearInterval(timerInterval);
             timer.textContent = "Game Over!"
             clearQuiz();
+            highScoreEl.style.display = "block";
         }
         
     }, 1000);
+}
+
+var score = 0;
+function setScore() {
+    var scoreEl = document.querySelector(".score");
+    scoreEl.textContent = score;
 }
 
 var optionA = document.querySelector(".quiz-option-a");
