@@ -140,10 +140,14 @@ function setTime(){
     }, 1000);
 }
 
+
 var score = 0;
+var yourScore = document.querySelector(".your-score");
+yourScore.textContent = (score);
+
 function setScore() {
     var scoreEl = document.querySelector(".score");
-    scoreEl.textContent = score;
+    scoreEl.textContent = (score);
 }
 
 var optionA = document.querySelector(".quiz-option-a");

@@ -32,6 +32,15 @@
     color: white;
 }
 
+.returnBtn {
+    margin: 0 auto;
+    height: 100px;
+    width: 200px;
+    font-size: 30px;
+    background-color: seagreen;
+    color: white;
+}
+
 .quiz-options {
     display: flex;
     flex-direction: column;
