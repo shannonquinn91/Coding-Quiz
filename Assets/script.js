@@ -143,7 +143,7 @@ function setTime(){
 
 var score = 0;
 var yourScore = document.querySelector(".your-score");
-yourScore.textContent = (score);
+yourScore.textContent = score;
 
 function setScore() {
     var scoreEl = document.querySelector(".score");
