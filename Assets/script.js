@@ -129,6 +129,9 @@ function setTime(){
     var timerInterval = setInterval(function(){
         secondsLeft--;
         timer.textContent = secondsLeft;
+        if (secondsLeft <6) {
+            timer.style.color = "red";
+        }
         
         if (secondsLeft <= 0) {
             clearInterval(timerInterval);
